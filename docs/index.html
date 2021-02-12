@@ -8,6 +8,12 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <style>
       body {
         margin: 0px;
@@ -73,19 +79,114 @@
         color: #fff;
       }
 
-.navigation-button{
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
 
-  background-color: #009ed6;
-        color: #fff;
-        padding: 5px 10px 5px 10px;
-}
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
 
-.navigation-button:hover{
+      .dropdown-content a {
+        color: black;
+        padding: 0.25rem 1.5rem;
+        text-decoration: none;
+        display: block;
+      }
 
-  background: green;
-        color: #fff;
+      .show {
+        display: block;
+      }
 
-}
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .custom-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      .custom-dropdown-content a {
+        color: black;
+        padding: 0.25rem 1.5rem;
+        text-decoration: none;
+        display: block;
+      }
+
+      .custom-show {
+        display: block;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .custom-navbar {
+        overflow: hidden;
+        background-color: #009ed6;
+      }
+
+      .custom-navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .custom-dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .custom-dropdown .custom-dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .custom-navbar a:hover,
+      .custom-dropdown:hover .custom-dropbtn {
+        background-color: green;
+      }
+
+      .custom-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .custom-dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .custom-dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .custom-dropdown:hover .custom-dropdown-content {
+        display: block;
+      }
     </style>
   </head>
 
@@ -125,34 +226,77 @@
       </div>
     </div>
 
-    <!--navigation bar (home,about,schemes,loan,member,career,gallery,faqs,contacts)-->
+    <!--naviagtion bar-->
+    <div class="container">
+      <div class="custom-navbar">
+        <a href="#home">Home</a>
 
-<div class="container">
-<span><button class="navigation-button">Home</button></span>
-<span><button class="navigation-button" style="padding: 5px 20px 5px 20px;">About <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
-  <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
-</svg></button></span>
-<span><button style="padding: 5px 20px 5px 20px;background: green;
-  color: #fff;">Schemes <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
-  <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
-</svg></button></span>
-<span><button class="navigation-button" style="padding: 5px 20px 5px 20px;">Loan <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
-  <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
-</svg></button></span>
-<span><button class="navigation-button" style="padding: 5px 20px 5px 20px;">Member <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
-  <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
-</svg></button></span>
-<span><button class="navigation-button" style="padding: 5px 20px 5px 20px;">Career</button></span>
-<span><button class="navigation-button" style="padding: 5px 20px 5px 20px;">Gallery</button></span>
-<span><button class="navigation-button" style="padding: 5px 20px 5px 20px;">FAQs</button></span>
-<span><button class="navigation-button" style="padding: 5px 10px 5px 10px;">Contact Us</button></span>
+        <div class="custom-dropdown">
+          <button class="custom-dropbtn">
+            About
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="custom-dropdown-content">
+            <a href="#">Nidhi Companies</a>
+            <a href="#">Company Profile</a>
+            <a href="#">Chairman</a>
+            <a href="#">Board Members</a>
+            <a href="#">Mission & Vision Statement</a>
+            <a href="#">Legal</a>
+            <a href="#">Regulatory and Supervisory Authorities</a>
+            <a href="#">Dream Goal</a>
+            <a href="#">Organization Structure</a>
+          </div>
+        </div>
 
+        <div class="custom-dropdown">
+          <button class="custom-dropbtn">
+            Schemes
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="custom-dropdown-content">
+            <a href="#">Saving Account</a>
+            <a href="#">Recurring Deposit</a>
+            <a href="#">Fixed Deposit - TDR(Intrest Payout)</a>
+            <a href="#">Fixed Deposit Monthly Income Scheme</a>
+            <a href="#">Recurring Deposit Term Deposit Scheme</a>
+            <a href="#">DRK Senior Citizen Fixed Deposit Scheme</a>
+          </div>
+        </div>
 
+        <div class="custom-dropdown">
+          <button class="custom-dropbtn">
+            Loans
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="custom-dropdown-content">
+            <a href="#">Gold Loan</a>
+            <a href="#">DRK India Members Credit Advance Loan</a>
+            <a href="#">Mortgage Loan</a>
+            <a href="#">Against Deposit Loan</a>
+            <a href="#">Secured Loan Against Insurance Bond</a>
+          </div>
+        </div>
 
-</div>
+        <div class="custom-dropdown">
+          <button class="custom-dropbtn">
+            Member
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="custom-dropdown-content">
+            <a href="#">Memebership</a>
+            <a href="#">Members Services</a>
+          </div>
+        </div>
 
+        <a href="#news">Careers</a>
+        <a href="#news">Gallery</a>
+        <a href="#news">FAQs</a>
+        <a href="#news">Contact US</a>
+      </div>
+    </div>
 
-<!--heading-->
+    <!--heading-->
     <div class="page-header">
       <div class="container">
         <h2 style="color: white">Recurring Deposit</h2>
@@ -163,8 +307,8 @@
         <!-- left col lg,md 4 | sm,xs 12   -->
         <div class="col-lg-4 col-md-4 col-sm-12 col-12">
           <!--daba bnana hai 
-            have to write content
-            lines under content-->
+          have to write content
+          lines under content-->
           <div class="side-menu">
             <h3>OUR SCHEMES</h3>
             <div class="side-top-column-items">
